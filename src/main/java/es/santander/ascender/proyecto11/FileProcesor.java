@@ -19,10 +19,22 @@ public class FileProcesor implements IFileProcesor {
     }
     
     public String eliminarVocales(String input) {
+        /*
+        char[] vocales ={'a','e','i','o','u','y'};
+        for (char symbol : input.toCharArray()) {
+            if symbol = char
+        };*/
         return "vocaler";
     }
     public void escribirAFile(String filePath, String content) {
+        try {
+            Files.writeString(Paths.get(filePath), content);
+        } catch (IOException e) {
+            System.out.println("File not found");
+        }
     }
+
+    
 
 
 }
